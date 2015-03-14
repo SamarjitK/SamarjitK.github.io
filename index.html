@@ -1,16 +1,278 @@
 <html>
   <head>
-  </head>
-  <body>
-    <h1>
-      My First Atom Page
-    </h1>
-    <p style= font_color: Blue> I'm so <strong>happy!</strong>Test, test</p>
-    <h2> I know... </h2>
-    <ul>
-      <li> Python </li>
-      <li> <abbr title= "HyperText Markup Language ">HTML</abbr> </li>
-    </ul>
+    <title>Homepages + Seattle</title>
 
+    <style>
+    .jumbotron{
+      background-image: url(http://2.bp.blogspot.com/-D3UB8Nz30zM/USv8WYmvSdI/AAAAAAAAB5o/S8rA7KrQYdM/s1600/seattle+skyline.jpg);
+    }
+    .jumbotron.first{
+      background-image: url(http://www.moviemaker.com/wp-content/uploads/seattle.jpg);
+    }
+    .jumbotron.second{
+      background-image: url(http://assets.vancitybuzz.com/wp-content/uploads/2014/02/Screen-Shot-2014-02-24-at-9.55.15-AM.png?f91710);
+      color: white;
+    }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script type="text/javascript">
+
+      function function1 (){
+        var str = "Click here to enter site"
+        var x = 0
+        if (document.getElementById('nameInput').value == "skaushik"){
+          x = x + 1
+        }
+        if (document.getElementById('passwordInput').value == "jscall"){
+          x = x + 1
+        }
+        if (x == 2){
+            location.href='file:///C:/Users/samarjit/Documents/GitHub/SamarjitK.github.io/Homepages+Links.html';
+        }
+        else {
+          alert("Sign in Failed!");
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Homepages+ Seattle</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="Homepages+ContactUs.html">Contact Us</a></li>
+          <li><a href="Homepages+About.html">About</a></li>
+          <li><a href="Homepages+Seattle.html">Visit Seattle</a></li>
+          <li><a href="Homepages+Links.html">Links</a></li>
+          <li><a href="Homepages+Seahawks.html">Seahawks</a></li>
+          <li>
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+              Sign Up
+            </button>
+          </li>
+          <li>
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2">
+              Sign In
+            </button>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Sign In for Homepages+</h4>
+        </div>
+        <div class="modal-body">
+          <div class="input-group">
+            <div class="input-group input-group-lg btn-block">
+              <input type="text" id='nameInput' class="form-control" placeholder="username">
+            </div>
+            <br>
+            <div class="input-group input-group-lg btn-block atultext">
+              <input type="text" id='passwordInput' class="form-control" placeholder="password">
+            </div>
+            <br>
+
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <a href="javascript:function1();">
+            <button type="button" class="btn btn-success btn-lg btn-block">
+              <span class="glyphicon glyphicon-ok"></span>
+            </button>
+          </a>
+          <br>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Sign Up for Homepages+</h4>
+        </div>
+        <div class="modal-body">
+          <div class="input-group">
+            <div class="input-group input-group-lg btn-block">
+              <input type="text" id='lgnameInput' class="form-control" placeholder="username">
+            </div>
+            <br>
+            <div class="input-group input-group-lg btn-block atultext">
+              <input type="text" id='lgpasswordInput' class="form-control" placeholder="password">
+            </div>
+            <br>
+             <div class="row">
+               <div class="col-md-3">
+
+              <abbr title="Month">
+                <div class="input-group input-group-lg btn-block">
+                <input type="text" id='monthInput' class="form-control" placeholder="MM">
+              </div>
+              </abbr>
+
+        </div>
+        <div class="col-md-3">
+
+          <abbr title="Day">
+          <div class="input-group input-group-lg btn-block">
+            <input type="text" id='dayInput' class="form-control" placeholder="DD">
+          </div>
+          </abbr>
+
+        </div>
+        <div class="col-md-6">
+
+          <abbr title="Year">
+          <div class="input-group input-group-lg btn-block">
+            <input type="text" id='yearInput' class="form-control" placeholder="YYYY">
+          </div>
+          </abbr>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <a href="signin.html">
+            <button type="button" class="btn btn-success btn-lg btn-block">
+              <span class="glyphicon glyphicon-ok"></span>
+            </button>
+          </a>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+    </div>
+    </div>
+    </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <div class="jumbotron">
+              <center><h1>Welcome to Homepages+</h1></center>
+              <center><h2>Seattle<h2></center>
+              <br>
+              <center><p><a class="btn btn-primary btn-lg" href="Homepages+Seattle.html" role="button">Visit Seattle</a></p><center>
+            </div>
+            <div class="carousel-caption">
+            </div>
+          </div>
+          <div class="item">
+            <div class="jumbotron first">
+              <center><h1>Welcome to Homepages+</h1></center>
+              <center><h2>Seattle<h2></center>
+              <br>
+              <center><p><a class="btn btn-primary btn-lg" href="Homepages+Seattle.html" role="button">Visit Seattle</a></p><center>
+            </div>
+            <div class="carousel-caption">
+            </div>
+          </div>
+          <div class="item">
+            <div class="jumbotron second">
+              <center><h1>Welcome to Homepages+</h1></center>
+              <center><h2>Seattle<h2></center>
+              <br>
+              <center><p><a class="btn btn-primary btn-lg" href="Homepages+Seattle.html" role="button">Visit Seattle</a></p><center>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-3">
+      <div class="thumbnail">
+        <img src="http://www.pacificsciencecenter.org/images/smartslider/slider-pompeii.jpg">
+        <div class="caption">
+          <h3>Pompeii: The exhibition</h3>
+          <p>This exhibit opened on February 7th, 2015. You will have the experience of your life, being at the the eruption, using immersive CGI experience. There will be many amazing artifacts from the lost Roman City. A good way to spend the weekend!</p>
+          <p><a href="http://www.pacificsciencecenter.org/Exhibits/pompeii" class="btn btn-primary" role="button" target="_blank">Learn More</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+        <div class="thumbnail">
+          <img src="http://www.wired.com/wp-content/uploads/2015/01/win10_holoLens_livingRoom_web.jpg">
+          <div class="caption">
+            <h3>Hololens: no compter needed</h3>
+            <p>The new Microsoft Hololens is cool new invention. You have the screen infront of your eyes, and it looks like it's real. You can watch TV, read books, and even play Minecraft, no computer needed.</p>
+            <p><a href="http://www.microsoft.com/microsoft-hololens/en-us" class="btn btn-primary" role="button" target="_blank">Learn More</a></p>
+          </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+      <div class="thumbnail">
+        <img src="http://az648995.vo.msecnd.net/win/2014/09/Windows_Product_Family_9-30-Event.png">
+        <div class="caption">
+          <h3>Windows 10: Better</h3>
+          <p>When Windows 8 came out, many people did not like its confusing interface. With Windows 10, Microsoft has learnt its lesson, and has made an even better software. Equipped with Cortana, and a better browser, Windows 10 is ready to sell.</p>
+          <p><a href="http://windows.microsoft.com/en-us/windows-10/about?ocid=WIN10_0_WOL_Hero_Home_Windows-10_Null_01" class="btn btn-primary" role="button" target="_blank">Learn More</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   </body>
 </html>
