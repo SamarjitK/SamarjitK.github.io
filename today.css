@@ -1,0 +1,18 @@
+h1{
+  padding: 12px;
+  color: blue;
+  background-color: orange;
+  border-radius: 20px;
+}
+h2{
+  color: purple;
+  padding: 15px;
+  background-color: yellow;
+  border-radius: 20px;
+}
+p{
+  color: rgb(255, 0, 0);
+  padding: 21px;
+  background-color: green;
+  border-radius: 20px;
+}
