@@ -1,20 +1,137 @@
 <html>
   <head>
     <title>Homepages+</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <style>
       div.header{
         background-image: url("https://developer.cdn.mozilla.net/media/uploads/demos/T/e/TechnoAyan/51e0f38e8fd1f69fa8f6425f3bfad55c/the-taj-mahal-app_1428811960_demo_package/images/portfolio/11.jpg");
       }
     </style>
+    <style>
+      td.quicklinks{
+        border: 5px solid green;
+        background-color: white
+      }
+    </style>
+    <style>
+      h1.title{
+        font-size: 75px;
+        font-family: Calibri;
+      }
+    </style>
+    <script type="text/javascript">
+      function searchgoogle (){
+        var term = document.getElementById('searchTerm').value
+        var website = 'https://www.google.com/?gfe_rd=cr&ei=-47qVdjcG7Tv8wfN0r_QBA&gws_rd=ssl,cr&fg=1#q=' + term
+        location.href= website;
+      }
+      function searchbing (){
+        var term1 = document.getElementById('searchTerm').value
+        var website1 = 'http://www.bing.com/search?q=' + term1 + '&qs=n&form=QBLH&pq=' + term1 + '&sc=0-12&sp=-1&sk=&cvid=acc1ef92e01c4cc782fba43ca332c346'
+        location.href= website1;
+      }
+    </script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.js"
+    type="text/javascript"></script>
+
+    <style type="text/css">
+    @import url("http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.css");
+
+    #feedControl {
+    margin-top : 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width : 440px;
+    font-size: 12px;
+    color: #9CADD0;
+    }
+    </style>
+    <script type="text/javascript">
+    function load() {
+    var feed ="http://rss.cnn.com/rss/edition.rss";
+    new GFdynamicFeedControl(feed, "feedControl");
+
+    }
+    google.load("feeds", "1");
+    google.setOnLoadCallback(load);
+    </script>
+    <script type="text/javascript">
+    function load() {
+    var feed ="http://rss.cnn.com/rss/edition_world.rss";
+    new GFdynamicFeedControl(feed, "feedControl1");
+
+    }
+    google.load("feeds", "1");
+    google.setOnLoadCallback(load);
+    </script>
   </head>
   <body>
-    <div class= "header">
-      <h1>Welcome to Homepages+</h1>
-      <br>
-      <br>
-      <h2>On this site, you can view any sites very quickly, and search bing and google directly.</h2>
-      <br>
-      <br>
-    </div>
+    <center><div class= "header">
+      <h1 class = "title">Welcome to Homepages+</h1>
+      <form>
+        <input type="text" id="searchTerm" placeholder="Search...">
+        <a href ="javascript:searchgoogle();"><button type="button">Search Google</button></a><a href="javascript:searchbing();"><button type="button">Search Bing</button></a>
+      </form>
+        <table class= "quicklinks">
+          <tr class= "quicklinks">
+            <td class= "quicklinks"><a href = "http://www.google.com"><img src="http://www.google.com/images/branding/product/1x/gsa_32dp.png" height= "50" width= "50"></a></td>
+            <td class= "quicklinks"><a href = "http://www.bing.com"><img src="http://c.s-microsoft.com/en-in/CMSImages/RecdProd_Bing_215x215.png?version=07484c02-2932-7ebf-5fb6-2ebc52f2c992" height= "50" width= "50"></a></td>
+            <td class= "quicklinks"><a href = "http://www.youtube.com"><img src="http://www.google.com/images/icons/material/product/1x/youtube_32dp.png" height= "50" width= "50"></a></td>
+            <td class= "quicklinks"><a href = "http://www.wikipedia.org"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Wikipedia-logo-v2-en.svg" height= "50" width= "50"></a></td>
+            <td class= "quicklinks"><a href = "http://www.facebook.com"><img src="https://scontent.fmaa1-2.fna.fbcdn.net/hprofile-xfp1/v/t1.0-1/p160x160/11896217_10154001910841729_1011974957258512846_n.png?oh=c02aa7dd5e2b98152dbe0d7963245209&oe=56745CE9" height= "50" width= "50"></a></td>
+            <td class= "quicklinks"><a href = "http://www.amazon.com"><img src="https://tse1.mm.bing.net/th?id=OIP.M42edd7df06d9ac85462f5e31c2075648o0&w=112&h=105&c=7&rs=1&qlt=90&pid=3.1&rm=2" height= "50" width= "50"></a></td>
+            <td class= "quicklinks"><a href = "http://www.yahoo.com"><img src="https://tse2.mm.bing.net/th?id=OIP.M78d6293f5f4767b4883e1d2629170b5eH0&w=219&h=131&c=7&rs=1&qlt=90&o=4&pid=1.1" height= "50" width= "50"></a></td>
+          </tr>
+        </table>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <div id="body">
+              <div id="feedControl">Loading...</div>
+            </div>
+            <div class="carousel-caption">
+              Top Stories
+            </div>
+          </div>
+          <div class="item">
+            <div id="body">
+              <div id="feedControl1">Loading...</div>
+            </div>
+            <div class="carousel-caption">
+              World News
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+
+    </div></center>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   </body>
 </html>
