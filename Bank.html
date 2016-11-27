@@ -1,10 +1,74 @@
 <html>
   <head>
-    <title></title>
+    <title>SK e-Bank: Make life easier.</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
+    <script>
+      $(document).ready(function(){
+          $(".loan").click(function(){
+              $("#deposit").fadeOut();
+              $("#widthdraw").fadeOut();
+              $("#contactus").fadeOut();
+              $("#loan").fadeIn();
+          });
+          $(".deposit").click(function(){
+              $("#loan").fadeOut();
+              $("#widthdraw").fadeOut();
+              $("#contactus").fadeOut();
+              $("#deposit").fadeIn();
+          });
+          $(".widthdraw").click(function(){
+              $("#loan").fadeOut();
+              $("#deposit").fadeOut();
+              $("#contactus").fadeOut();
+              $("#widthdraw").fadeIn();
+          });
+          $(".contactus").click(function(){
+              $("#loan").fadeOut();
+              $("#deposit").fadeOut();
+              $("#widthdraw").fadeOut();
+              $("#contactus").fadeIn();
+          });
+      });
+    </script>
   </head>
   <body>
-    <a href="http://samarjitk.github.io/Loan.docx" target='_blank' title="Click here to open a Word document">
-      Download your form here!
-    </a>
+    <div style = "background-color: #99ccff;"><h1>Samarjit K. e-Bank: Making life easier since 2016.</h1></div>
+    <table border="1" style="border-collapse:collapse;">
+      <tr>
+        <td><button class="loan">Easy Loan</button></td>
+        <td><button class="deposit">Quick Deposit</button></td>
+        <td><button class="widthdraw">Swift Widthdrawal</button></td>
+        <td><button class="contactus">Contact Us</button></td>
+      </tr>
+      <tr>
+        <td colspan="4">Explore Our World Class Facilities</td>
+      </tr>
+      <tr>
+        <td colspan="4" id="loan" style="display:none;">
+          <h1>Taking loans from the SK e-bank</h1>
+          <p>Loans are simple and fast. We offer loans in both Indian Rupee and US Dollar denominations up to USD 100.00 and INR 9000.00 respectively. 1% interest.</p>
+          <a href="http://samarjitk.github.io/Loan.docx" target='_blank' title="Click here to open a Word document">
+            Download your form here!
+          </a>
+        </td>
+        <td colspan="4" id="deposit" style="display:none;">
+          <h1>Your money is safe with us</h1>
+          <p>You can deposit any sum of money at the SK bank's branches. They can be in any currency, but currency conversions have a fee. Now offering at 1% interest, which will increase exponentially over time.</p>
+          <a href="http://samarjitk.github.io/Deposit.docx" target='_blank' title="Click here to open a Word document">
+            Deposit by filling in this form.
+          </a>
+        </td>
+        <td colspan="4" id="widthdraw" style="display:none;">
+          <h1>
+          <p>If you already have an account, you can widthdraw money from any of our branches.</p>
+        </td>
+        <td colspan="4" id="contactus" style="display:none;">
+          <
+        </td>
+      </tr>
+    </table>
+
+
   </body>
 </html>
