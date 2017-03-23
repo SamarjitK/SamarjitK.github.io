@@ -21,6 +21,11 @@
         font-family: Calibri;
       }
     </style>
+    <style>
+      td.topbar{
+        padding: "20px";
+      }
+    </style>
     <script>
       function searchgoogle (){
         var term = document.getElementById('searchTerm').value
@@ -34,32 +39,178 @@
       }
     </script>
     <style>
-      div.plants{
-        background-image:url("C:\Users\samarjit\Pictures\SpringBreakCATrip2014\P1020907");
-      }
-      img {
+      td.quicklinks {
     opacity: 0.4;
     filter: alpha(opacity=40); /* For IE8 and earlier */
     }
 
-    img:hover {
+    td.quicklinks:hover {
         opacity: 1.0;
         filter: alpha(opacity=100); /* For IE8 and earlier */
     }
     </style>
+    <!--FOR DROPDOWN MENU-->
+    <style>
+      /*default editor*/
+      ul.dropdown, ul.submenu, ul.subsubmenu{
+        list-style: none;
+      }
+      /* LEVEL ONE*/
+      ul.dropdown{
+        position: relative;
+      }
+      ul.dropdown li{
+        font-weight: bold;
+        float: left;
+        background: #22ff00;
+      }
+      ul.dropdown p{
+        color: #6a00ff;
+      }
+      ul.dropdown li p:hover{
+        color: #ff0000;
+      }
+      ul.dropdown a:active{
+        color: #ffa500;
+      }
+      ul.dropdown li a{
+        display: block;
+        padding: 10px 20px;
+        border-right: 1px solid #333;
+        color: #ff0000;
+      }
+
+      ul.dropdown li:last-child a{
+        border-right: none;
+      }
+      ul.dropdown li.hover, ul.dropdown li:hover{
+        background: #00ff84;
+        color: black;
+        position: relative;
+      }
+      ul.dropdown li.hover a{
+        color: black;
+      }
+      /* LEVEL TWO*/
+      ul.dropdown ul{
+        width: 220px;
+        visibility: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+      }
+      ul.dropdown ul.submenu{
+        background: #00ff84;
+      }
+      ul.dropdown ul li{
+        font-weight: normal;
+        background: #00ff84;
+        color: #000;
+        border-bottom: 1px solid #ccc;
+        float: none;
+      }
+      ul.dropdown ul li a{
+        border-right: none;
+        width: 100%;
+        display: inline-block:
+      }
+      ul.dropdown ul li:hover, ul.dropdown ul li:hover a{
+        background: #b300ff;
+        color: #00ff00;
+      }
+      /* LEVEL THREE*/
+      ul.dropdown ul ul{
+        left: 100%;
+        top: 0;
+      }
+      ul.dropdown ul ul li{
+        background: #b300ff;
+      }
+      ul.dropdown ul.subsubmenu{
+        background: #b300ff;
+      }
+      ul.dropdown ul.subsubmenu li:hover a{
+        background: #ffe600;
+        color: #f700ff;
+      }
+      ul.dropdown li:hover > ul{
+        visibility: visible;
+      }
+    </style>
+    <script>
+      $(function(){
+
+          $("ul.dropdown li").hover(function(){
+
+              $(this).addClass("hover");
+              $('ul:first',this).css('visibility', 'visible');
+
+          }, function(){
+
+              $(this).removeClass("hover");
+              $('ul:first',this).css('visibility', 'hidden');
+
+          });
+
+          $("ul.dropdown li ul li:has(ul)").find("a:first").append(" &raquo; ");
+
+      });
+    </script>
   </head>
   <body>
-    <div class= "toolbar">
-      <table class= "toolbar">
-        <td class= "toolbar">
-          <form>
-            <input type="text" id="searchTerm" placeholder="Search...">
-            <!--<a href ="javascript:searchgoogle();"><button type="button">Search Google</button></a>-->
-            <a href="javascript:searchbing();"><button type="button">Search</button></a>
-          </form>
+    <table class= "topbar" border=1>
+      <tr>
+        <td  style="background-color: #00ff00; vertical-align:middle;" class = "topbar" width="20%" height="1px">
+          <p style="font-size:2.2em;">Homepages+</p>
         </td>
-      </table>
-    </div>
+        <td style="background-color: #00ff00;">
+          <ul class="dropdown">
+            <li><a href="#"><p>Science</p></a>
+              <ul class="submenu">
+                <li><a href="#">Middle School Science</a></li>
+                <li><a href="#">IGCSE Science</a>
+                  <ul class="subsubmenu">
+                    <li><a href="#">Past Papers</a></li>
+                    <li><a href="#">Lessons (Coming soon)</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">AP Science (Coming soon)</a></li>
+              </ul>
+            </li>
+            <li><a href="#"><p>Games</p></a>
+              <ul class="submenu">
+                <li><a href="#">Flipline Studios</a></li>
+              </ul>
+            </li>
+            <li><a href="#"><p>Math</p></a>
+              <ul class="submenu">
+                <li><a href="#">Calculators</a></li>
+                <li><a href="#">Helpful Links</a></li>
+              </ul>
+            </li>
+        </td>
+        <td  style="background-color: #00ff00;" class = "topbar" width="50%">
+          <div class= "toolbar">
+                <form>
+                  <table>
+                    <tr>
+                      <td>
+                        <input style="height:50px; font-size:20px;" type="text" id="searchTerm" placeholder="Search the Web...">
+                      </td>
+                      <td>
+                        <a href ="javascript:searchgoogle();"><div style="border-radius:10px; border: 2px solid; background:#c699de; padding: 12px 0px 12px 0px;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1280px-Google_2015_logo.svg.png" height="25px"></div></a>
+                      </td>
+                      <td>
+                        <a href="javascript:searchbing();"><div style="border-radius:10px; border: 2px solid; background:#c699de; padding: 0px;"><img src="http://logok.org/wp-content/uploads/2014/09/Bing-logo-2013.png" height="50px"></div></a>
+                      </td>
+                    </tr>
+                  </table>
+                </form>
+          </div>
+        </td>
+      </tr>
+    </table>
+
 
     <center><div class= "header">
       <h1 class = "title">Homepages+</h1>
@@ -88,10 +239,7 @@
       <br><br>
       <br><a href="http:\\samarjitk.github.io\Science10-Biology-Classification.html">Science 10 Biology: Classification</a>
 
-      <br>
-      <div class="plants">
-        <h1>Plants</h1>
-      </div>
+
 
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
