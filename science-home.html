@@ -1,0 +1,149 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+      td.lvl1, td.lvl2, td.lvl3{
+        background: #7cfc84;
+        color: #c9104b;
+        padding: 10px;
+      }
+      td.lvl1:hover, td.lvl2:hover, td.lvl3:hover{
+        background: #36bf3f;
+        color: #ff0051;
+      }
+      td.col2{
+        background:#fffa70;
+        padding: 0px 0px 0px 10px;
+        width: 200px;
+      }
+      div.lvl1subj td, div.lvl2subj td, div.lvl3subj td{
+        background: #fffa70;
+        color:#7d00ab;
+        width: 180px;
+      }
+      div.lvl1subj td:hover, div.lvl2subj td:hover, div.lvl3subj td:hover{
+        color: #fffa70;
+        background:#7d00ab;
+      }
+    </style>
+    <script>
+      $(document).ready(function(){
+        $(".lvl1subj").hide();
+        $(".lvl2subj").hide();
+        $(".lvl3subj").hide();
+        $(".col2").hide();
+          $(".lvl1").click(function(){
+              $(".lvl3subj").hide();
+              $(".lvl2subj").hide();
+              $(".lvl1subj").fadeIn();
+              $(".col2").fadeIn();
+          });
+          $(".lvl2").click(function(){
+              $(".lvl1subj").hide();
+              $(".lvl3subj").hide();
+              $(".lvl2subj").fadeIn();
+              $(".col2").fadeIn();
+          });
+          $(".lvl3").click(function(){
+              $(".lvl1subj").hide();
+              $(".lvl2subj").hide();
+              $(".lvl3subj").fadeIn();
+              $(".col2").fadeIn();
+          });
+      });
+    </script>
+    <script>
+      function hideall(){
+        $(".8biodiv").hide();
+        $(".8chemdiv").hide();
+        $(".8phydiv").hide();
+      }
+      $(document).ready(function(){
+        hideall();
+        $(".8bio").click(function(){
+          hideall();
+          $(".8biodiv").fadeIn();
+        });
+        $(".8chem").click(function(){
+          hideall();
+          $(".8chemdiv").fadeIn();
+        });
+        $(".8phy").click(function(){
+          hideall();
+          $(".8phydiv").fadeIn();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Science</h1>
+    <table>
+      <tr>
+        <td class="lvl1">
+          Level One: Middle School Science (6-8th grade)
+        </td>
+        <td rowspan="3" class="col2">
+          <div class="lvl1subj">
+            <table border="0">
+              <tr><td class="8bio">Biology</tr>
+              <tr><td class="8chem">Chemistry</td></tr>
+              <tr><td class="8phy">Physics</td></tr>
+            </table>
+          </div>
+          <div class="lvl2subj">
+            <table border="0">
+              <tr><td class="10bio">Biology</td></tr>
+              <tr><td class="10chem">Chemistry</td></tr>
+              <tr><td class="10phy">Physics</td></tr>
+              <tr><td class="10pastpapers">Past Papers</td></tr>
+            </table>
+          </div>
+          <div class="lvl3subj">
+            <table border="0">
+              <tr><td class="APbio">Biology (Coming soon)</td></tr>
+              <tr><td class="APchem">Chemistry (Coming soon)</td></tr>
+              <tr><td class="APphy">Physics (Coming soon)</td></tr>
+            </table>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="lvl2">
+          Level Two: IGCSE Science (9-10th grade)
+        </td>
+      </tr>
+      <tr>
+        <td class="lvl3">
+          Level Three: AP Science (11-12th grade)
+        </td>
+      </tr>
+    </table>
+    <div class="8biodiv" style="border-radius: 20px; background: #7bff00; padding: 10px;">
+      <h1>Middle School Biology</h1>
+      <h3>Course Overview</h3>
+      <p>This course covers general basic biology, providing the foundation for further high school courses.</p>
+      <p>However, this is not a vast course, and focuses on only three main areas:</p>
+      <p>1. <a href="http:\\samarjitk.github.io\Science08-Biology-Plants.html">Plants</a></p>
+      <p>2. <a href="http:\\samarjitk.github.io\Science08-Biology-Ecology.html">Ecology</a></p>
+      <p>3. <a href="http:\\samarjitk.github.io\Science08-Biology-VariationandInheritance.html">Variation and Inheritance</a></p>
+    </div>
+    <div class="8chemdiv" style="border-radius: 20px; background: #ffa600; padding: 10px;">
+      <h1>Middle School Chemistry</h1>
+      <h3>Course Overview</h3>
+      <p>This course covers general basic chemistry, providing the foundation for further high school courses.</p>
+      <p>However, this is not a vast course, and focuses on only three main areas:</p>
+      <p>1. <a href="http:\\samarjitk.github.io\Science08-Chemistry-Elements.html">Elements</a></p>
+      <p>2. <a href="http:\\samarjitk.github.io\Science08-Chemistry-ReactionsandEnergy.html">Reactions and Energy</a></p>
+      <p>3. <a href="http:\\samarjitk.github.io\Science08-Chemistry-RateofReaction.html">Rate of Reaction</a></p>
+    </div>
+    <div class="8phydiv" style="border-radius: 20px; background: #00ff73; padding: 10px;">
+      <h1>Middle School Physics</h1>
+      <h3>Course Overview</h3>
+      <p>This course covers general basic physics, providing the foundation for further high school courses.</p>
+      <p>However, this is not a vast course, and focuses on only three main areas:</p>
+      <p>1. <a href="http:\\samarjitk.github.io\Science08-Physics-Forces.html">Forces</a></p>
+      <p>2. <a href="http:\\samarjitk.github.io\Science08-Physics-Electricity.html">Electricity</a></p>
+      <p>3. <a href="http:\\samarjitk.github.io\Science08-Physics-Energy.html">Energy</a></p>
+    </div>
+  </body>
+</html>
